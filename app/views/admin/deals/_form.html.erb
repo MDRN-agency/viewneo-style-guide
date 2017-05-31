@@ -1,0 +1,37 @@
+<%= simple_nested_form_for deal, url: deal.new_record? ? admin_deals_path : admin_deal_path(deal) do |f| %>
+  <%= f.error_notification %>
+  <div class="row">
+    <div class="col-md-6">
+      <%= f.input :title %>
+      <%= f.input :teaser %>
+      <%= f.input :description, input_html: { class: 'wysiwyg-editor' } %>
+      <%= f.input :thumbnail_photo %>
+      <%= f.input :cover_photo %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :company_ids, label: 'Companies', as: :select, include_hidden: false, collection: Company.select(:id, :name), input_html: { class: 'selectize', multiple: true } %>
+      <%= f.input :brand_ids, label: 'Brands', as: :select, include_hidden: false, collection: Brand.select(:id, :name), input_html: { class: 'selectize', multiple: true } %>
+      <div class="form-group" style="border: 1px solid #ccc; padding: 10px">
+        <legend>Deal options</legend>
+        <%= f.fields_for :options do |f_option|%>
+          <div class="row">
+            <div class="col-md-10">
+              <%= f_option.input :title, label: false, placeholder: 'Title' %>
+              <%= f_option.input :details, label: false, placeholder: 'Details' %>
+              <%= f_option.input :original_price, label: false, placeholder: 'Original price' %>
+              <%= f_option.input :deal_price, label: false, placeholder: 'Deal price' %>
+            </div>
+            <div class="col-md-2">
+              <%= f_option.link_to_remove "Remove", class: 'text-danger' %>
+            </div>
+            <hr>
+          </div>
+        <% end %>
+        <%= f.link_to_add "Add option", :options, class: 'btn btn-sm btn-default' %>
+      </div>
+    </div>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

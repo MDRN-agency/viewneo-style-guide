@@ -1,0 +1,96 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @listing.name %>
+</p>
+
+<p>
+  <strong>Brands:</strong>
+  <%= @listing.brands.map(&:name).join(', ') %>
+</p>
+
+<p>
+  <strong>Companies:</strong>
+  <%= @listing.companies.map(&:name).join(', ') %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @listing.type %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @listing.summary %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @listing.description %>
+</p>
+
+<p>
+  <strong>Street Address:</strong>
+  <%= @listing.street_address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @listing.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @listing.state %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @listing.country %>
+</p>
+
+<p>
+  <strong>Logo:</strong>
+  <% if @listing.logo_url %>
+    <img src="<%= @listing.logo_url %>" width="50">
+  <% else %>
+    N/A
+  <% end %>
+</p>
+
+<p>
+  <strong>Thumbnail:</strong>
+  <% if @listing.thumbnail_photo_url %>
+    <img src="<%= @listing.thumbnail_photo_url %>" width="50">
+  <% else %>
+    N/A
+  <% end %>
+</p>
+
+<p>
+  <strong>Cover:</strong>
+  <% if @listing.cover_photo_url %>
+    <img src="<%= @listing.cover_photo_url %>" width="50">
+  <% else %>
+    N/A
+  <% end %>
+</p>
+
+<p>
+  <strong>Website url:</strong>
+  <%= @listing.website_url %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @listing.phone_number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @listing.email %>
+</p>
+
+<%= link_to 'Edit', edit_admin_listing_path(@listing) %> |
+<%= link_to 'Back', admin_listings_path %>

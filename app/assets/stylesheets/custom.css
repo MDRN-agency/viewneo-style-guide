@@ -1,0 +1,111 @@
+.color-white {
+    color: #fff;
+}
+.banner-search-main {
+    margin: 0 auto;
+    background: rgba(0,0,0, .5);
+    padding: 10px;
+    max-width: 810px;
+    border-radius: 4px;
+}
+.form-control {
+    background: rgba(51, 51, 51, .74); 
+    height: 60px;
+    font-size: 20px;
+    color: #fff;
+}
+.input-icon input {
+    padding-left: 50px !important;
+    position: relative;
+    color: #959595;
+}
+.bootstrap-select .btn.btn-default {
+    border: 1px solid #000;
+    color: #fff;
+    font-size: 20px;
+    text-transform: none;
+    height: 60px;
+    background: rgba(0, 0, 0, .4); 
+    font-weight: 400;
+}
+.banner-search-main .form-control {
+    border-left: none;
+    border-radius: 4px;
+    font-weight: 400;
+}
+.btn-secondary {
+    color: #fff;
+    background-color: #08c;
+    border-color: #08c;
+}
+.splash-search h1 {
+    font-size: 60px;
+    line-height: 80px;
+    font-weight: 100;
+    text-transform: inherit;
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+}
+.splash-search h2.banner-sub-title {
+    text-align: left;
+}
+.banner-search-main {
+    margin: 0;
+}
+.overlay::before {
+    content:"";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(33, 33, 33, .65);
+}
+
+.input-icon:before {
+    color: #111;
+    text-align: left;
+    font-family: "FontAwesome";
+    font-size: 30px;
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    font-weight: 100;
+    z-index: 1;
+}
+.z-index-front {
+    z-index: 99999;
+}
+.banner-search-main .btn-secondary {
+    padding: 6px 30px;
+    height: 60px;
+    width: 100%;
+    font-size: 20px;
+}
+.mb-5 {
+    margin-bottom: 5px;
+}
+.footer {
+    background-color: #222;
+    padding: 100px 0 70px;
+}
+.footer-bottom {
+    width: 100%;
+    background-color: #1f1f1f;
+    border-top: 1px solid #151515;
+    padding: 30px 0;
+}
+
+.figure-block a {
+    width:  300px;
+    height: 185px;
+    overflow: hidden;
+}
+
+.figure-block img {
+    width:  100%;
+    height: 100%;
+}

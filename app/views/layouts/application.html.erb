@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Family Travlr</title>
+    <!--Meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="festival travel, festival vacations, festival resort, festival getaway">
+    <meta name="description" content="The largest directory of festival getaways online.">
+    <meta name="author" content="Travlr Inc.">
+
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" >
+        <%= csrf_meta_tags %>
+        <%= stylesheet_link_tag    'application', media: 'all' %>
+        <%= stylesheet_link_tag    'https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons' %>
+        <%= yield :head_js %>
+        <%= javascript_include_tag 'application' %>
+    </head>
+
+    <body>
+        <%= render 'layouts/partials/navbar' %>
+        <%= render 'layouts/partials/flash_messages' %>
+        <%= yield %>
+
+        <%= render 'layouts/partials/footer' %>
+        
+        <%= yield :page_js %>
+    </body>
+</html>

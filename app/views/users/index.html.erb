@@ -1,0 +1,42 @@
+<h2>Users</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Photo</th>
+            <th>Email</th>
+            <th>Created at</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @users.each do |user| %>
+            <tr>
+                <td>
+                    <%= user.id %>
+                </td>
+                <td>
+                    <%= user.first_name %>
+                </td>
+                <td>
+                    <%= user.last_name %>
+                </td>
+                <td>
+                    <% if user.photo_url %>
+                        <img src="<%= user.photo_url(:sm) %>">
+                    <% else %>
+                      N/A
+                    <% end %>
+                </td>
+                <td>
+                    <%= user.email %>
+                </td>
+                <td>
+                    <%= user.created_at %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

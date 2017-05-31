@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Manage Listings</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Brands</th>
+      <th>Companies</th>
+      <th>Summary</th>
+      <th>Address</th>
+      <th>Logo</th>
+      <th>Thumbnail</th>
+      <th>Cover</th>
+      <th>Website url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @listings.each do |listing| %>
+      <tr>
+        <td><%= listing.name %></td>
+        <td><%= listing.type %></td>
+        <td><%= listing.brands.map(&:name).join(', ') %></td>
+        <td><%= listing.companies.map(&:name).join(', ') %></td>
+        <td><%= listing.summary %></td>
+        <td><%= listing.full_address %></td>
+        <td>
+          <% if listing.logo_url %>
+            <img src="<%= listing.logo_url %>" width="50">
+          <% else %>
+            N/A
+          <% end %>
+        </td>
+        <td>
+          <% if listing.thumbnail_photo_url %>
+            <img src="<%= listing.thumbnail_photo_url %>" width="50">
+          <% else %>
+            N/A
+          <% end %>
+        </td>
+        <td>
+          <% if listing.cover_photo_url %>
+            <img src="<%= listing.cover_photo_url %>" width="50">
+          <% else %>
+            N/A
+          <% end %>
+        </td>
+        <td><%= listing.website_url %></td>
+        <td><%= link_to 'Show', admin_listing_path(listing) %></td>
+        <td><%= link_to 'Edit', edit_admin_listing_path(listing) %></td>
+        <td><%= link_to 'Destroy', admin_listing_path(listing), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div class="text-center">
+  <%= page_entries_info @listings %>
+  <br>
+  <%= paginate @listings %>
+</div>
+<br>
+
+<%= link_to 'New Listing', new_admin_listing_path %>

@@ -1,0 +1,79 @@
+<!--start section top-->
+<section id="splash-section">
+    <div class="splash-inner-media"></div>
+    <div class="splash-inner-content">
+        <div class="container-fluid">
+            <%= render 'pages/header' %>
+
+            <div class="container">
+                <div class="splash-search">
+                    <div class="search-table fave-screen-fix-inner">
+                        <div class="search-col">
+                            <h1>Experience family, everywhere.</h1>
+                            <h2 class="banner-sub-title">The largest collection of family-friendly vacations and getaways. </h2>
+                            <form class="form-inline banner-search-main">
+                                <div class="form-group">
+                                    <div class="search input-search input-icon">
+                                        <input class="form-control" type="text" placeholder="young kids, toddlers, young parents, family reunions...">
+                                    </div>
+                                    <div class="search-btn">
+                                        <button class="btn btn-secondary"><!-- <i class="fa fa-search"></i> --> Find Experiences</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%= render 'pages/slider_footer' %>
+            <div class="overlay"></div>
+        </div>
+    </div>
+</section>
+<!--end section top-->
+
+<%= render 'pages/featured_getaways' %>
+
+<%= render 'pages/hero_feature' %>
+
+<%= render 'pages/popular' %>
+
+<script type="text/javascript" src="js/custom.js"></script>  <!-- DO NOT REMOVE -->
+<script type="text/javascript">
+jQuery(document).ready( function($) {
+    $(".splash-inner-media").vegas({
+        delay: 7000,
+        preloadImage: true,
+        timer: true,
+        shuffle: true,
+        transition: ['fade'],
+        transitionDuration: 2000,
+        overlay: true,
+        slides: [
+            { src: '<%= image_path("stock/1.jpg")%>'},
+            { src: '<%= image_path("stock/2.jpg")%>' },
+            { src: '<%= image_path("stock/3.jpg")%>' },
+            { src: '<%= image_path("stock/4.jpg")%>' },
+            { src: '<%= image_path("stock/5.jpg")%>' },
+            { src: '<%= image_path("stock/6.jpg")%>' }
+            
+        ]
+    });
+});
+</script>
+
+
+
+
+
+
+    
+
+
+    
+
+
+<!--Start Scripts-->
+
+
+<%= render 'pages/login_modal' %>

@@ -1,0 +1,69 @@
+<p>
+  <strong>Title:</strong>
+  <%= @deal.title %>
+</p>
+
+<p>
+  <strong>Brands:</strong>
+  <%= @deal.brands.map(&:name).join(', ') %>
+</p>
+
+<p>
+  <strong>Companies:</strong>
+  <%= @deal.companies.map(&:name).join(', ') %>
+</p>
+
+<p>
+  <strong>Teaser:</strong>
+  <%= @deal.teaser %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <p><%= @deal.description.html_safe %></p>
+</p>
+
+<p>
+  <strong>Thumbnail:</strong>
+  <% if @deal.thumbnail_photo_url %>
+    <img src="<%= @deal.thumbnail_photo_url %>" width="50">
+  <% else %>
+    N/A
+  <% end %>
+</p>
+
+<p>
+  <strong>Cover:</strong>
+  <% if @deal.cover_photo_url %>
+    <img src="<%= @deal.cover_photo_url %>" width="50">
+  <% else %>
+    N/A
+  <% end %>
+</p>
+<p>
+  <strong>Deal options</strong>
+  <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Details</th>
+          <th>Original Price</th>
+          <th>Deal Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @deal.options.each do |option| %>
+          <tr>
+            <td><%= option.title %></td>
+            <td><%= option.details %></td>
+            <td><%= option.original_price %></td>
+            <td><%= option.deal_price %></td>
+          </tr>
+        <% end %>
+      </tbody>
+  </table>
+</p>
+
+<br>
+<%= link_to 'Edit', edit_admin_deal_path(@deal) %> |
+<%= link_to 'Back', admin_deals_path %>

@@ -1,0 +1,129 @@
+<%= simple_nested_form_for @listing, url: (@listing.persisted? ? admin_listing_path(listing) : admin_listings_path), html: { novalidate: false } do |f| %>
+  <%= f.error_notification %>
+  <div class="row">
+    <div class="col-md-6">
+      <%= f.input :name, required: true %>
+      <%= f.input :company_ids, label: 'Companies', as: :select, include_hidden: false, collection: Company.select(:id, :name), input_html: { class: 'selectize', multiple: true } %>
+      <%= f.input :brand_ids, label: 'Brands', as: :select, include_hidden: false, collection: Brand.select(:id, :name), input_html: { class: 'selectize', multiple: true } %>
+      <%= f.input :type, as: :select, collection: Listing::TYPES, required: true %>
+      <%= f.input :logo %>
+      <%= f.input :thumbnail_photo %>
+      <%= f.input :cover_photo %>
+      <%= f.input :summary %>
+      <%= f.input :description %>
+      <%= f.input :website_url %>
+      <%= f.input :phone_number %>
+      <%= f.input :email %>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group" style="border: 1px solid #ccc; padding: 10px">
+        <div class="form-group">
+          <legend>Address</legend>
+          <input class="form-control" type="text" id="input-full-address" placeholder="Enter a location to autocomplete address fields">
+        </div>
+        <%= f.input :street_address %>
+        <%= f.input :city %>
+        <%= f.input :state %>
+        <%= f.input :country, as: :string %>
+      </div>
+
+      <div class="form-group" style="border: 1px solid #ccc; padding: 10px">
+        <legend>Photos gallery</legend>
+        <%= f.fields_for :photos do |photo_f|%>
+          <div class="row">
+            <div class="col-md-4">
+              <%= photo_f.input :caption, label: false, placeholder: 'Caption' %>
+            </div>
+            <div class="col-md-5">
+              <% if photo_f.object.image_url(:sm) %>
+                <img src="<%= photo_f.object.image_url(:sm)%>" style="width: 50px">
+              <% else %>
+              <%= photo_f.input :image, label: false %>
+              <% end %>
+            </div>
+            <div class="col-md-2">
+              <%= photo_f.link_to_remove "Remove", class: 'text-danger' %>
+            </div>
+          </div>
+        <% end %>
+        <%= f.link_to_add "Add photo", :photos, class: 'btn btn-sm btn-default' %>
+      </div>
+
+      <div class="form-group" style="border: 1px solid #ccc; padding: 10px">
+        <legend>Videos gallery</legend>
+        <%= f.fields_for :videos do |video_f|%>
+          <div class="row">
+            <div class="col-md-4">
+              <%= video_f.input :caption, label: false, placeholder: 'Caption' %>
+            </div>
+            <div class="col-md-5">
+              <%= video_f.input :url, label: false, placeholder: 'URL' %>
+            </div>
+            <div class="col-md-2">
+              <%= video_f.link_to_remove "Remove", class: 'text-danger' %>
+            </div>
+          </div>
+        <% end %>
+        <%= f.link_to_add "Add video", :videos, class: 'btn btn-sm btn-default' %>
+      </div>
+    </div>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+<% content_for :head_js do %>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&libraries=places"></script>
+<% end %>
+
+<% content_for :page_js do %>
+<script type="text/javascript">
+  (function() {
+    $(document).ready(function() {
+      $('#input-full-address').on('keypress', function(e) {
+        if (e.which === 13) {
+          e.preventDefault();
+        }
+      });
+
+      var fillInAddress = function(place) {
+        var streetAddress = city = state = country = '';
+        for (var i = 0; i < place.address_components.length; i++) {
+          var addressType = place.address_components[i].types[0];
+          var val = place.address_components[i].long_name;
+          switch(addressType) {
+            case 'street_number':
+              streetAddress += val; break;
+            case 'route':
+              streetAddress += ' ' + val; break;
+            case 'locality':
+              city = val; break;
+            case 'administrative_area_level_1':
+              state = val; break;
+            case 'country':
+              country = val; break;
+          }
+        }
+
+        $('[name="listing[street_address]"]').val(streetAddress.trim());
+        $('[name="listing[city]"]').val(city);
+        $('[name="listing[state]"]').val(state);
+        $('[name="listing[country]"]').val(country);
+      };
+
+      var initAutocompleteAddress = function () {
+        var autocomplete = new google.maps.places.Autocomplete(
+          document.getElementById('input-full-address'),
+          { types: ['geocode'] }
+        );
+        autocomplete.addListener('place_changed', function() {
+          fillInAddress(autocomplete.getPlace());
+        });
+      };
+
+      initAutocompleteAddress();
+    });
+  })();
+</script>
+<% end %>

@@ -1,0 +1,9 @@
+---
+:verbose: false
+:concurrency: 10
+:logfile: ./log/sidekiq.log
+:pidfile: ./tmp/pids/sidekiq.pid
+:queues:
+  - default
+  - mailers
+  - cron

@@ -1,0 +1,63 @@
+<h1>Listings</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Brands</th>
+      <th>Companies</th>
+      <th>Summary</th>
+      <th>Address</th>
+      <th>Logo</th>
+      <th>Thumbnail</th>
+      <th>Cover</th>
+      <th>Website url</th>
+      <th>Phone number</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @listings.each do |listing| %>
+      <tr>
+        <td>
+          <a href="<%= listing_path(listing.slug) %>">
+            <%= listing.name %>
+          </a>
+        </td>
+        <td><%= listing.type %></td>
+        <td><%= listing.brands.map(&:name).join(', ') %></td>
+        <td><%= listing.companies.map(&:name).join(', ') %></td>
+        <td><%= listing.summary %></td>
+        <td><%= listing.full_address %></td>
+        <td>
+          <% if listing.logo_url %>
+            <img src="<%= listing.logo_url %>" width="50">
+          <% else %>
+            N/A
+          <% end %>
+        </td>
+        <td>
+          <% if listing.thumbnail_photo_url %>
+            <img src="<%= listing.thumbnail_photo_url %>" width="50">
+          <% else %>
+            N/A
+          <% end %>
+        </td>
+        <td>
+          <% if listing.cover_photo_url %>
+            <img src="<%= listing.cover_photo_url %>" width="50">
+          <% else %>
+            N/A
+          <% end %>
+        </td>
+        <td><%= listing.website_url %></td>
+        <td><%= listing.phone_number %></td>
+        <td><%= listing.email %></td>
+        <td><%= link_to 'Show', listing_path(listing.slug) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

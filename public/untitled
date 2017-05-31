@@ -1,0 +1,74 @@
+<div class="row">
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
+                                    <div class="feature feature-1">
+                                        <div class="article__title bg--dark">
+                                            <a href="https://www.amazon.com/Alexia-Meditation-Ergonimically-Physiology-Ergonomic/dp/B01BVTVAV6/ref=lp_7482427011_1_3?srs=7482427011&ie=UTF8&qid=1493745391&sr=8-3&th=1">
+                                                <img src="http://alexiameditationseat.com/wp-content/uploads/2016/11/logo-1.jpg" style="height: 35px; width: auto;" class="img-rounded ">
+                                                <!-- <span class="h5 pull-right">Alexia Meditaton</span> -->
+                                            </a>
+                                        </div>
+                                        <img alt="Image" src="http://www.jerrysales.com/images/D371-E103%20Caribbean%20Blue%20Fabric.jpg" />
+                                        <div class="feature__body boxed boxed--md boxed--border">
+                                            <h3>$29.99</h3>
+                                            <p class="">
+                                                 Multitude of styled 
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
+                                    <div class="feature feature-1">
+                                         <div class="article__title bg--dark">
+                                            <a href="https://www.amazon.com/Alexia-Meditation-Ergonimically-Physiology-Ergonomic/dp/B01BVTVAV6/ref=lp_7482427011_1_3?srs=7482427011&ie=UTF8&qid=1493745391&sr=8-3&th=1">
+                                                <img src="https://images-na.ssl-images-amazon.com/images/S/abs-image-upload-na/b/ams/ATVPDKIKX0DER/8f7591f15a1d184b314088c34abb7c2d.w980.h288.jpg" style="height: 35px; width: auto;" class="img-rounded ">
+                                                <!-- <span class="h5 pull-right">Silent Mind</span> -->
+                                            </a>
+                                        </div>
+                                        <img alt="Image" src="https://images-na.ssl-images-amazon.com/images/I/81MiJRu9SaL._SL1500_.jpg" />
+                                        <div class="feature__body boxed boxed--md boxed--border">
+                                            <h3>$36.69</h3>
+                                            <p class="">
+                                                Multitude of styled 
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
+                                    <div class="feature feature-1">
+                                         <div class="article__title bg--dark">
+                                            <a href="https://www.amazon.com/Alexia-Meditation-Ergonimically-Physiology-Ergonomic/dp/B01BVTVAV6/ref=lp_7482427011_1_3?srs=7482427011&ie=UTF8&qid=1493745391&sr=8-3&th=1">
+                                                <img src="http://www.ecotrend.ca/sites/default/files/SS_Logo_Banner_HiRes.jpg" style="height: 35px; width: auto;" class="img-rounded ">
+                                                <!-- <span class="h5 pull-right">Soverign Silver</span> -->
+                                            </a>
+                                        </div>
+                                        <img alt="Image" src="http://www.vitamindiscountcenter.com/assets/images/684088232371.jpg" />
+                                        <div class="feature__body boxed boxed--md boxed--border">
+                                            <h3>$35.99</h3>
+                                            <p class="">
+                                                Multitude of styled 
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
+                                    <div class="feature feature-1 bg--dark">
+                                        <div class="article__title ">
+                                            <a href="https://www.amazon.com/Alexia-Meditation-Ergonimically-Physiology-Ergonomic/dp/B01BVTVAV6/ref=lp_7482427011_1_3?srs=7482427011&ie=UTF8&qid=1493745391&sr=8-3&th=1">
+                                                <img src="http://alexiameditationseat.com/wp-content/uploads/2016/11/logo-1.jpg" style="height: 35px; width: auto;" class="img-rounded ">
+                                                <!-- <span class="h5 pull-right">Singing Bowls</span> -->
+                                            </a>
+                                        </div>
+                                        <img alt="Image" src="https://images-na.ssl-images-amazon.com/images/I/81Q6FWTVwaL._SL1500_.jpg" />
+                                        <div class="feature__body boxed boxed--md boxed--border">
+                                            <h3>$35.99</h3>
+                                            <p class="">
+                                                Multitude of styled 
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!--end feature-->
+                                </div>
+                            </div>

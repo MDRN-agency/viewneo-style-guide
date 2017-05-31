@@ -1,0 +1,40 @@
+<p>
+  <strong>Name:</strong>
+  <%= @company.name %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @company.summary %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @company.description %>
+</p>
+
+<p>
+  <strong>Industry:</strong>
+  <%= @company.industry %>
+</p>
+
+<p>
+  <strong>Logo:</strong>
+  <% if @company.logo_url %>
+  <img src="<%= @company.logo_url %>" width="100">
+  <% else %>
+    N/A
+  <% end %>
+</p>
+
+<p>
+  <strong>Thumbnail photo:</strong>
+  <% if @company.thumbnail_photo_url %>
+  <img src="<%= @company.thumbnail_photo_url %>" width="100">
+  <% else %>
+    N/A
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_admin_company_path(@company) %> |
+<%= link_to 'Back', admin_companies_path %>

@@ -1,0 +1,27 @@
+<h2>My Profile</h2>
+<table class="table">
+    <tr>
+        <td style="width: 200px"><strong>Photo:</strong></td>
+        <td>
+            <img src="<%= current_user.photo_url(:sm) %>">
+        </td>
+    </tr>
+
+    <tr>
+        <td><strong>First name:</strong></td>
+        <td><%= current_user.first_name %></td>
+    </tr>
+
+    <tr>
+        <td><strong>Last name:</strong></td>
+        <td><%= current_user.last_name %></td>
+    </tr>
+
+    <tr>
+        <td><strong>Email:</strong></td>
+        <td><%= current_user.email %></td>
+    </tr>
+
+</table>
+<hr>
+<a href="<%= edit_profile_path %>" class="btn btn-default">Edit profile</a>
