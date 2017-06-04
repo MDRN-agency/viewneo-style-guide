@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Family Travlr</title>
-    <!--Meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="festival travel, festival vacations, festival resort, festival getaway">
-    <meta name="description" content="The largest directory of festival getaways online.">
-    <meta name="author" content="Travlr Inc.">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <![endif]-->
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+    <title>Viewneo Design Guide</title>
+    <title>Pixxett API Docs Theme</title>
+    <meta name="keywords" content="viewneo styleguide, viewneo design, viewneo best practices, viewneo UX">
+    <meta name="description" content="The viewneo corporate style guide.">
+    <meta name="author" content="Viewneo">
+    <meta name="copyright" content="Viewneo">
+    <meta name="date" content="2017-6-04">
 
+    <!--Mobile Icons and Favicons-->
     <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="images/favicons/manifest.json">
-    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" >
-        <%= csrf_meta_tags %>
-        <%= stylesheet_link_tag    'application', media: 'all' %>
-        <%= stylesheet_link_tag    'https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i%7CMaterial+Icons' %>
-        <%= yield :head_js %>
-        <%= javascript_include_tag 'application' %>
-    </head>
 
-    <body>
-        <%= render 'layouts/partials/navbar' %>
-        <%= render 'layouts/partials/flash_messages' %>
-        <%= yield %>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <%= render 'layouts/partials/footer' %>
-        
-        <%= yield :page_js %>
-    </body>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900">
+    
+  
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+  <body id="pixxett-api">
+    <%= yield %>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">document.createElement('section');
+      var duration = 500, easing = 'swing';
+    </script>
+    <script type="text/javascript">
+      ScrollLoad("scrollholder", "scroll", false);
+    </script>
+  </body>
 </html>

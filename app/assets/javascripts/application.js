@@ -11,16 +11,13 @@
 // about supported directives.
 //
 
-//= require jquery
-//= require modernizr.custom
-//= require bootstrap.min
-//= require owl.carousel.min
-//= require jquery.matchHeight-min
-//= require bootstrap-select
-//= require jquery-ui
-//= require isotope.pkgd.min
-//= require jquery.nicescroll
-//= require vegas.min
-//= require infobox
-//= require markerclusterer
-//= require custom
+//= require styleguide/prism
+//= require styleguide/jquery.1.6.4
+//= require styleguide/jquery.scrollTo-1.4.2-min
+//= require styleguide/jquery.easing
+//= require styleguide/slides.min.jquery
+//= require styleguide/script
+//= require styleguide/scroll
+//= require styleguide/common
+//= require styleguide/jquery.mobile-menu.min
+

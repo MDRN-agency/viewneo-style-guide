@@ -10,12 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require bootstrap
- *= require bootstrap-select
- *= require font-awesome
- *= require owl.carousel
- *= require jquery-ui
- *= require vegas
- *= require styles
+ *= require styleguide/jquery.mobile-menu
+ *= require styleguide/style
+ *= require styleguide/responsive
  *= require custom
  */
