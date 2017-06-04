@@ -1,8 +1,8 @@
 /*================================================================================
-  Item Name: API Themes
-  Description: Premium Bootstrap API Template
-  Author: Pixxett
-  Author URL: http://www.pixxett.com
+  Item Name: Viewneo StyleGuide 
+  Description: Viewneo Corporate Style Guide and Docs
+  Author: Viewneo, K. Coakley
+  Author URL: www.viewneo.com
 ================================================================================*/
 
 /*------------------------------------------------------------------
@@ -790,8 +790,8 @@ div.drag_bar {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: #fff;
-    border-bottom: 1px solid #e4e4e4;
+    background-color: #252525;
+    border-bottom: 1px solid #000;
     display: block;
     position: fixed;
     top: 0;
@@ -846,7 +846,7 @@ div.drag_bar {
     list-style: none;
 }
 #pixxett-api .dx-nav-0-link {
-    color: #6c7378;
+    color: #eee;
     display: block;
     font-size: 14px;
     height: 60px;
@@ -855,15 +855,15 @@ div.drag_bar {
     position: relative;
 }
 #pixxett-api .dx-nav-active .dx-nav-0-link {
-    color: #1e2021;
+    color: #fdc516;
     font-weight: 500;
 }
 #pixxett-api .dx-nav-0-link:focus, #pixxett-api .dx-nav-0-link:hover {
-    color: #1e2021;
+    color: #fdc516;
     text-decoration: none;
 }
 #pixxett-api .dx-nav-active .dx-nav-0-link:after {
-    background: #1e2021;
+    background: #fdc516;
     bottom: 0;
     content: '';
     height: 2px;
