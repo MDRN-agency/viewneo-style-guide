@@ -33,17 +33,24 @@
   
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-  </head>
-  <body id="pixxett-api">
-    <%= yield %>
-
+    
+    <!-- Must go above JS include below -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
+    <%= javascript_include_tag 'application' %>
+    
+    <!-- Onepage JS for scrolling animation -->
     <script type="text/javascript">document.createElement('section');
       var duration = 500, easing = 'swing';
     </script>
     <script type="text/javascript">
       ScrollLoad("scrollholder", "scroll", false);
     </script>
+
+  </head>
+  <body id="pixxett-api">
+    <%= yield %>
+
+    
   </body>
 </html>
