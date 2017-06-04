@@ -1,9 +1,9 @@
-#pixxett-api .dx-nav-0-link.larger-link {
-	font-size: 130% !important;
-}
-
 #pixxett-api .dx-nav-0-link.link-with-img img {
 	height: 30px;
 	width: auto;
 	vertical-align: middle;
+}
+
+#pixxett-api .header__brand img {
+    
 }
