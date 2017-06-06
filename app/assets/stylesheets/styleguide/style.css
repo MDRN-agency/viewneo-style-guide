@@ -49,7 +49,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 26px;
 }
 
@@ -58,7 +58,7 @@ footer, header, section {
 }
 
 a {
-    color: #000;
+    color: #164efd;
     text-decoration: none;
     cursor: pointer;
 }
@@ -119,9 +119,6 @@ strong {
     text-align: center
 }
 
-a {
-    color: #0aa2ee;
-}
 
 hr {
     border-top: 1px solid #D4D4D4;
@@ -727,7 +724,7 @@ ol li.child_1 a {
 }
 
 #documenter_sidebar ol a.current {
-    color: #0099e5;
+    color: #164efd;
 }
 
 #documenter_copyright {
@@ -774,7 +771,7 @@ div.drag_bar {
 
 
 #pixxett-api a {
-    color: #0099e5;
+    
     text-decoration: none;
 }
 
@@ -916,10 +913,10 @@ div.drag_bar {
 
 #pixxett-api .dx-btn {
     background-color: transparent;
-    border: 1px solid #0070ba;
+    border: 1px solid #fdc516;
     border-radius: 1.5rem;
     box-sizing: content-box;
-    color: #0070ba;
+    color: #fdc516;
     cursor: pointer;
     display: inline-block;
     font-family: 'Raleway', sans-serif;
@@ -932,7 +929,7 @@ div.drag_bar {
     transition: all .15s ease-out;
 }
 #pixxett-api .dx-btn-primary, .dx-btn.active {
-    background-color: #0070ba;
+    background-color: #164efd;
     border-color: transparent;
     color: #fff;
 }
@@ -1113,11 +1110,11 @@ div.drag_bar {
 #pixxett-api #language .language-toggle .language-toggle-source:checked+.language-toggle-button,
 #pixxett-api #language .language-toggle .language-toggle-source:checked+.language-toggle-button:active,
 #pixxett-api #language .language-toggle .language-toggle-source:checked+.language-toggle-button:hover {
-    background: -webkit-linear-gradient(top,#5abaf0,#4aafed);
-    background: linear-gradient(180deg,#5abaf0,#4aafed);
+    background: -webkit-linear-gradient(top,#fdc516,#fdc516);
+    background: linear-gradient(180deg,#fdc516,#fdc516);
     border-color: transparent;
     color: #fff;
-    text-shadow: 0 0 0 hsla(0,0%,100%,.5), 0 1px 1px #0e74c3;
+    /*text-shadow: 0 0 0 hsla(0,0%,100%,.5), 0 1px 1px #0e74c3;*/
     -webkit-animation: languageToggleShows .25s 1 ease-out;
     animation: languageToggleShows .25s 1 ease-out;
 }
@@ -1127,7 +1124,7 @@ div.drag_bar {
 }
 
 #pixxett-api #language .language-toggle li:active .language-toggle-button {
-    background: #33373a;
+    background: #164efd;
     border-color: #373b3e;
     color: #dde4e8;
 }
@@ -1165,7 +1162,6 @@ div.drag_bar {
 }
 
 #pixxett-api .method .method-copy a {
-    color: #0099e5;
     text-decoration: none;
 }
 
@@ -1494,8 +1490,7 @@ display: block !important;
 
 #pixxett-api .method .method-copy .table {
     font-size: 13px;
-    font-family: 'Open Sans', sans-serif;
-    text-Shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
     letter-spacing: normal;
 }
 #pixxett-api .method .method-copy thead {

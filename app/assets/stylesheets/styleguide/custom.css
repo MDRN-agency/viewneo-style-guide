@@ -1,9 +1,93 @@
+#pixxett-api {
+	/*color: #111;*/
+}
+
+body, table {
+	font-family: 'Roboto';
+}
+
+#pixxett-api h1, #pixxett-api h2, #pixxett-api h3, #pixxett-api h4, #pixxett-api h5, #pixxett-api h6 { 
+	font-family: 'Roboto';
+	font-weight: 400;
+}
+
+.lead {
+	font-size: 18px;
+	line-height: 28px;
+}
+
+p {
+	font-size: 18px;
+	line-height: 28px;
+	font-weight: 300;
+}
+
 #pixxett-api .dx-nav-0-link.link-with-img img {
 	height: 30px;
 	width: auto;
 	vertical-align: middle;
 }
 
-#pixxett-api .header__brand img {
-    
+
+#pixxett-api #background .background-actual {
+    background: #111;
+}
+
+#documenter_sidebar ol li a {
+  color: #4c555a;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: 'Oswald';
+  padding-left: 30px;
+  text-transform: uppercase;
+}
+
+#documenter_sidebar ol li > ol li a {
+		text-transform: capitalize;
+  	padding-left: 50px;
+		font-family: 'Roboto';
+		padding: 0px 15px 5px 40px;
+		font-size: 14px;
+		font-weight: 400;
+		color: #222;
+  
+}
+
+#documenter_sidebar {
+    color: #333;
+    background: #f9f9f9;
+    border-right: 1px solid #e4e4e4;
+}
+
+#documenter_sidebar ol a {
+    color: #333;
+    background: transparent;
+}
+
+#pixxett-api #language .language-toggle li .language-toggle-button {
+    position: relative;
+    z-index: 50;
+    display: block;
+    padding: 0 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #000;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 29px;
+}
+
+#pixxett-api .header-section.header-section-example {
+    left: 45%;
+    right: 0;
+    z-index: 10;
+    height: 50px;
+    padding-left: 40px;
+    background: rgba(	253, 197, 22, 1);
+    color: #d0d4d7;
+}
+
+#pixxett-api #language .language-toggle .language-toggle-source:checked+.language-toggle-button {
+	background: #dea902;
+	color: #fef1c7;
 }
